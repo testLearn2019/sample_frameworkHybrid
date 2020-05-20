@@ -22,13 +22,13 @@ public class LoginPage {
 		driver.findElement(By.id(reuse.readProperties("loginButton"))).click();
 	}
 	
-	public void forgotPassword(int row, int col_user) throws Exception {
+/*	public void forgotPassword(int row, int col_user) throws Exception {
 		driver.findElement(By.xpath(reuse.readProperties("forgotPassword"))).click();
 		Thread.sleep(3000);
 		driver.findElement(By.id(reuse.readProperties("forgotPassUserName"))).sendKeys(reuse.excelRead(row, col_user));
 
 		driver.findElement(By.id(reuse.readProperties("resetButtonCancel"))).click();
 		
-	}
+	}*/
 
 }
