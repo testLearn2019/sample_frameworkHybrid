@@ -18,9 +18,6 @@ public class LoginPage {
 		driver.findElement(By.id(reuse.readProperties("userNameLocator"))).sendKeys(reuse.excelRead(row, col_user));
 		
 		driver.findElement(By.id(reuse.readProperties("passwordLocator"))).sendKeys(reuse.excelRead(row, col_pass));
-		
-		
-		
 		driver.findElement(By.id(reuse.readProperties("loginButton"))).click();
 	}
 	
