@@ -15,12 +15,10 @@ public class LoginPage {
 	
 	public void login(int row, int col_user, int col_pass) {
 		reuse = new Reusables (driver);
-		//webUtils = new WebDriverUtils(driver);
-		//webUtils.enterText("id", reuse.readProperties("userNameLocator"), reuse.excelRead(row, col_user));
 		driver.findElement(By.id(reuse.readProperties("userNameLocator"))).sendKeys(reuse.excelRead(row, col_user));
-		//webUtils.enterText("id", reuse.readProperties("passwordLocator"), reuse.excelRead(row, col_pass));
+		
 		driver.findElement(By.id(reuse.readProperties("passwordLocator"))).sendKeys(reuse.excelRead(row, col_pass));
-		//webUtils.clickElement("id", reuse.readProperties("loginButton"));
+		
 		driver.findElement(By.id(reuse.readProperties("loginButton"))).click();
 	}
 	
@@ -28,7 +26,7 @@ public class LoginPage {
 		driver.findElement(By.xpath(reuse.readProperties("forgotPassword"))).click();
 		Thread.sleep(3000);
 		driver.findElement(By.id(reuse.readProperties("forgotPassUserName"))).sendKeys(reuse.excelRead(row, col_user));
-		//driver.findElement(By.id(reuse.readProperties("resetPasswordButton"))).click();
+
 		driver.findElement(By.id(reuse.readProperties("resetButtonCancel"))).click();
 		
 	}
